@@ -111,7 +111,7 @@ class BasicHorizontalCarousel(FletCarousel):
 
         c = [self.__item_list]
 
-        if not self.buttons or len(self.buttons) == 0:
+        if not self.buttons:
             return c
 
         c.insert(0, self.buttons[0])
@@ -145,7 +145,7 @@ class BasicHorizontalCarousel(FletCarousel):
         self._auto_cycle_status = -1
 
     def __update_buttons(self):
-        if self.buttons or len(self.buttons) > 0:
+        if self.buttons:
             self.buttons[0].on_click = self.prev
 
             if len(self.buttons) >= 2:
